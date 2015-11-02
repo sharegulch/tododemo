@@ -5,11 +5,20 @@ table#tasktable {
 
 table#tasktable td {
   border: 1px none blue;
-  padding: 4px;
+  padding: 0px;
+  width: 0%;
+  vertical-align: bottom;
 }
 
 table#tasktable td:last-child {
-  text-align: right;
+  //text-align: right;
+  width: 100%;
+}
+
+table#tasktable td:first-child button {
+  //text-align: right;
+  padding: 0 0px 0px 0px;
+  border: 1px none blue;
 }
 
 body {
