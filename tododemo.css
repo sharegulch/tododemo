@@ -7,7 +7,8 @@ table#tasktable td {
   border: 1px none blue;
   padding: 0px;
   width: 0%;
-  vertical-align: bottom;
+  //vertical-align: bottom;
+  vertical-align: middle;
 }
 
 table#tasktable td:last-child {
@@ -96,7 +97,6 @@ ul {
   font-weight: bold;
   background: none;
   font-size: 1em;
-  border: none;
   position: relative;
 }
 
