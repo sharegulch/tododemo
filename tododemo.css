@@ -11,9 +11,21 @@ table#tasktable td {
   vertical-align: middle;
 }
 
+table#tasktable td.private {
+  background: #eee;
+  border-color: #ddd;
+}
+
 table#tasktable td:nth-child(3) {
-  min-width: 14em;
-  max-width: 14em;
+  min-width: 7em;
+  max-width: 7em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table#tasktable td:nth-child(4) {
+  min-width: 12em;
+  max-width: 12em;
   overflow: hidden;
   text-overflow: ellipsis;
 }

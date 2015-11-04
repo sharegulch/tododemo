@@ -31,7 +31,18 @@
   <tr>
     <td><button class="delete">&times;</button></td>
     <td><input type="checkbox" checked="{{checked}}" class="toggle-checked"/></td>
-    <td><span class="meteor-id">{{meteorId}}</span></td>
-    <td><span class="{{#if checked}}strikeout{{/if}}">{{text}}</span></td>
+    <td>
+      {{#if isOwner}}
+        <button class="toggle-private">
+          {{#if private}}
+            Private
+          {{else}}
+            Public
+          {{/if}}
+        </button>
+      {{/if}}
+    </td>
+    <td><span class="meteor-id">{{owner}}</span></td>
+    <td class="{{#if private}}private{{/if}}"><span class="{{#if checked}}strikeout{{/if}}">{{text}}</span></td>
   </tr>
 </template>
