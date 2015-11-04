@@ -11,6 +11,13 @@ table#tasktable td {
   vertical-align: middle;
 }
 
+table#tasktable td:nth-child(3) {
+  min-width: 14em;
+  max-width: 14em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 table#tasktable td:last-child {
   //text-align: right;
   width: 100%;

@@ -21,12 +21,14 @@ if (Meteor.isClient) {
 
   Template.body.events({
     "submit .new-task": function (event) {
-      //console.log(event);
       event.preventDefault();
       var text = event.target.tasktext.value;
       Tasks.insert({
         text: text,
-        createdAt: new Date() // current time
+        createdAt: new Date(),
+        owner: Meteor.userId(),
+        username: Meteor.user().username,
+        email: Meteor.user().emails[0].address
       });
       event.target.tasktext.value = "";
     },
