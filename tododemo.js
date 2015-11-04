@@ -23,12 +23,14 @@ if (Meteor.isClient) {
     "submit .new-task": function (event) {
       event.preventDefault();
       var text = event.target.tasktext.value;
+      var user = Meteor.user();
+      console.log( JSON.stringify( user ) );
       Tasks.insert({
         text: text,
         createdAt: new Date(),
         owner: Meteor.userId(),
         username: Meteor.user().username,
-        email: Meteor.user().emails[0].address
+        meteorId: Meteor.user()._id
       });
       event.target.tasktext.value = "";
     },
@@ -46,6 +48,10 @@ if (Meteor.isClient) {
     "click .delete": function () {
       Tasks.remove(this._id);
     },
+  });
+
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
   });
 
 }
